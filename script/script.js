@@ -76,3 +76,7 @@ oddBtn.addEventListener("click", () => {
   isEven = false;
   oddEvenGame(isEven, oddEvenNumber.value);
 });
+evenBtn.addEventListener("click", () => {
+  isEven = true;
+  oddEvenGame(isEven, oddEvenNumber.value);
+});
