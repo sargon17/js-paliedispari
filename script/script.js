@@ -49,3 +49,9 @@ checkPalindromeBtn.addEventListener("click", () => {
   const isPalindrome = checkForPalindrome(palindromeInput.value);
   displayResult(isPalindrome);
 });
+palindromeInput.addEventListener("keydown", (key) => {
+  if (key.key === "Enter") {
+    const isPalindrome = checkForPalindrome(palindromeInput.value);
+    displayResult(isPalindrome);
+  }
+});
