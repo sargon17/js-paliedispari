@@ -15,7 +15,6 @@ const checkForPalindrome = function (string) {
 
   for (let index = 0; index < string.length / 2; index++) {
     if (string[index] !== string[string.length - 1 - index]) {
-      console.log("non e palindromo");
       return false;
     }
   }
@@ -29,7 +28,7 @@ const displayResult = function (value) {
     result.innerHTML = `${palindromeInput.value} is a Palindrome`;
     result.classList.add("text-success");
   } else {
-    result.innerHTML = `${palindromeInput.value} is a Palindrome`;
+    result.innerHTML = `${palindromeInput.value} is not a Palindrome`;
     result.classList.add("text-danger");
   }
 };
