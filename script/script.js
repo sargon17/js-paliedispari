@@ -2,6 +2,7 @@ const moreBtn = document.querySelector("#moreBtn");
 const palindromeList = document.querySelector("#palindromeList");
 const checkPalindromeBtn = document.querySelector("#checkPalindrome");
 const palindromeInput = document.querySelector("#palindromeInput");
+const result = document.querySelector("#result");
 
 let isListHidden = true;
 
@@ -11,6 +12,26 @@ const removeSpaces = function (string) {
 
 const checkForPalindrome = function (string) {
   string = removeSpaces(string.toLowerCase());
+
+  for (let index = 0; index < string.length / 2; index++) {
+    if (string[index] !== string[string.length - 1 - index]) {
+      console.log("non e palindromo");
+      return false;
+    }
+  }
+  return true;
+};
+
+const displayResult = function (value) {
+  result.innerHTML = "";
+  result.className = "";
+  if (value) {
+    result.innerHTML = `${palindromeInput.value} is a Palindrome`;
+    result.classList.add("text-success");
+  } else {
+    result.innerHTML = `${palindromeInput.value} is a Palindrome`;
+    result.classList.add("text-danger");
+  }
 };
 
 moreBtn.addEventListener("click", () => {
@@ -25,5 +46,6 @@ moreBtn.addEventListener("click", () => {
 });
 
 checkPalindromeBtn.addEventListener("click", () => {
-  checkForPalindrome(palindromeInput.value);
+  const isPalindrome = checkForPalindrome(palindromeInput.value);
+  displayResult(isPalindrome);
 });
