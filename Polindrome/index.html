@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/cleaner.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container vh-100">
+        <div class="row">
+            <div class="col">
+                <h1>
+                    Check Palindrome
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Some palindromes to try:</h4>
+                <ul class="d-none" id="palindromeList">
+                    <li>A nut for a jar of tuna</li>
+                    <li>Taco cat</li>
+                    <li>Oozy rat in a sanitary zoo</li>
+                    <li>Civic</li>
+                    <li>Kazak</li>
+                    <li>Esse</li>
+                    <li>Rotavator</li>
+                    <li>Sagas</li>
+                    <li>A dog! A panic in a pagoda</li>
+                    <li>Amore, Roma</li>
+                </ul>
+                <button class="btn btn-primary" id="moreBtn">See more</button>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <input type="text" name="palindrome" id="palindromeInput" class="input-group p-1"
+                    placeholder="Are we not drawn onward, we few, drawn onward to new era">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary" id="checkPalindrome">Check Palindrome</button>
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    <div class="container vh-100">
+        <div class="row">
+            <div class="col">
+                <h1>Odd or Even</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="number" min="1" max="5" class="input-group-sm p-1" id="oddEvenNumber">
+                <button class="btn btn-primary" id="oddBtn">Odd</button>
+                <button class="btn btn-secondary" id="evenBtn">Even</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 id="oddEvenResult"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
