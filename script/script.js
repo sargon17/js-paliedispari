@@ -6,6 +6,7 @@ const result = document.querySelector("#result");
 const oddEvenNumber = document.querySelector("#oddEvenNumber");
 const oddBtn = document.querySelector("#oddBtn");
 const evenBtn = document.querySelector("#evenBtn");
+const oddEvenResult = document.querySelector("#oddEvenResult");
 
 let isListHidden = true;
 let isEven = true;
@@ -40,13 +41,23 @@ function displayResult(value) {
 function oddEvenGame(isEven, playerNum) {
   pcNum = Math.floor(Math.random() * 5 + 1);
   sum = pcNum + parseInt(playerNum);
+  oddEvenResult.className = "";
 
   if (sum % 2 === 0 && isEven) {
-    console.log("you win", sum, isEven);
+    oddEvenResult.innerHTML = `You have won, the sum is ${
+      sum % 2 === 0 ? "even" : "odd"
+    } because the computer chose ${pcNum} and you ${playerNum}`;
+    oddEvenResult.classList.add("text-success");
   } else if (sum % 2 !== 0 && !isEven) {
-    console.log("you win", sum, isEven);
+    oddEvenResult.innerHTML = `You have won, the sum is ${
+      sum % 2 === 0 ? "even" : "odd"
+    } because the computer chose ${pcNum} and you ${playerNum}`;
+    oddEvenResult.classList.add("text-success");
   } else {
-    console.log("you lose", sum, isEven);
+    oddEvenResult.innerHTML = `Damn, you have lost, the sum is ${
+      sum % 2 === 0 ? "even" : "odd"
+    } because the computer chose ${pcNum} and you ${playerNum}`;
+    oddEvenResult.classList.add("text-danger");
   }
 }
 
